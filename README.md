@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+Pizza Restaurants
+This Flask API project provides endpoints to manage pizza restaurants and their menus. It allows you to view restaurants, their menus, add new menu items, and delete restaurants.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Problem Statement
+Managing pizza restaurants and their menus can be a complex task. This API simplifies the process by providing a straightforward way to interact with restaurant data and their associated pizzas. It also includes validation for pricing to ensure data integrity.
 
-## Available Scripts
+Project Structure
+The project structure is organized as follows:
 
-In the project directory, you can run:
+app.py: The main Flask application file containing the API routes and configurations.
+pizza_restaurants.db: SQLite database file to store restaurant, pizza, and menu item data.
 
-### `npm start`
+README.md: This documentation file.
+requirements.txt: List of project dependencies.
+venv/: Virtual environment directory (create one using python -m venv venv).
+Getting Started
+To get started with this project, follow the steps below:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Fork the Project
+Click the "Fork" button at the top-right corner of this repository. This will create a copy of the project in your GitHub account.
+Clone the Project
+On your forked repository, click the "Code" button and copy the URL (e.g., https://github.com/your-username/pizza-restaurants-api.git).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Open your terminal or command prompt and navigate to the directory where you want to clone the project.
 
-### `npm test`
+Run the following command to clone the project to your local machine:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git clone https://github.com/your-username/pizza-restaurants-api.git
+Install Dependencies
+Navigate to the project directory:
 
-### `npm run build`
+cd pizza-restaurants-api
+Create a virtual environment (if not already created):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+python -m venv venv
+Activate the virtual environment:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+On Windows:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+venv\Scripts\activate
+On macOS and Linux:
 
-### `npm run eject`
+source venv/bin/activate
+Install project dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+pip install -r requirements.txt
+Run the Application
+Ensure you are in the project directory with the virtual environment activated.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run the Flask application:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+python app.py
+The API will start running locally at http://localhost:5000. You can access the API using this URL.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+API Endpoints
+GET /restaurants: Get a list of all restaurants.
+GET /restaurants/:id: Get details of a specific restaurant by ID.
+DELETE /restaurants/:id: Delete a restaurant by ID, along with its menu items.
+GET /pizzas: Get a list of all available pizzas.
+POST /restaurant_pizzas: Create a new menu item associated with a restaurant and pizza.
+Contributing
+If you'd like to contribute to this project, please follow the standard GitHub flow:
 
-## Learn More
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Make changes, commit, and push to your branch.
+Create a pull request to submit your changes for review.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
