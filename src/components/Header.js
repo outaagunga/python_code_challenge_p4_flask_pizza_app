@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../css/Header.css";
-import { useMyContext } from "../MyContext"; // Updated import
+import { useMyContext } from "../MyContext";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { darkMode } = useMyContext(); // Updated hook usage
+  const { darkMode } = useMyContext();
 
   // Use useEffect to add an event listener to track scroll position
   useEffect(() => {

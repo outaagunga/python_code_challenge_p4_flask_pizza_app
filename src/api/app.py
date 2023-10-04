@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, abort
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+from models import Restaurant, Pizza, RestaurantPizza, db
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 
 app = Flask(__name__)

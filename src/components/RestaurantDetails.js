@@ -5,10 +5,10 @@ import { useMyContext } from "../MyContext"; // Import the context hook
 function RestaurantDetails() {
   const { id } = useParams();
   const { setRestaurant } = useMyContext(); // Access setRestaurant from the context
-  const { restaurant: selectedRestaurant } = useMyContext(); // Rename restaurant to selectedRestaurant
+  const { restaurant: selectedRestaurant } = useMyContext();
 
   useEffect(() => {
-    // Fetch restaurant details by ID from your API
+    // Fetch restaurant details by ID from  API
     fetch(`/restaurants/${id}`)
       .then((response) => {
         if (response.status === 404) {

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useMyContext } from "../MyContext";
 
 const Body = () => {
-  const { restaurants, fetchRestaurants } = useMyContext(); // Updated hook usage and added fetchRestaurants function
+  const { restaurants, fetchRestaurants } = useMyContext();
 
   useEffect(() => {
     // Fetch the list of restaurants from your API
